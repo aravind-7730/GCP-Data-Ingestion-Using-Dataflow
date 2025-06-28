@@ -1,0 +1,7 @@
+#Commands used to run the ingestion pipelines
+
+python batch.py --input_path "gs://data-ingest-7730/data/data_in/review.json" --table "data-proc-7730:ingest.review" --error_table "data-proc-7730:ingest.error" --schema_path "gs://data-ingest-7730/data/schema/review-schema.json" --project data-proc-7730 --temp_location gs://data-ingest-7730/tmp --staging_location gs://data-ingest-7730/staging --runner DataflowRunner --job_name data-ingestion-20250517-04	
+
+
+
+python streaming.py --input_path=gs://data-ingest-7730/data/data_in/review.json --schema_path=gs://data-ingest-7730/data/schema/review-schema.json --table=data-proc-7730:ingest.review --error_table=data-proc-7730:ingest.review_error --pubsub_topic=projects/data-proc-7730/topics/yelp-dataset --pubsub_input=projects/data-proc-7730/topics/yelp-dataset --project=data-proc-7730 --runner=DataflowRunner --temp_location=gs://data-ingest-7730/tmp --staging_location=gs://data-ingest-7730/staging --region=us-central1 --job_name=gcs-to-pubsub-to-bq-20250612
