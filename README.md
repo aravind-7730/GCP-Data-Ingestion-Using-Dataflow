@@ -64,22 +64,6 @@ Yelp JSON data is published to Pub/Sub and consumed by a Beam streaming pipeline
 - **Google Cloud SDK**
 - **Python 3.x**
 - **Cloud Composer (Apache Airflow)**
-- *(Optional)* Vertex AI / Generative AI models for enhancement and metadata inference
+- **Vertex AI / Generative AI **
 
----
 
-# Optional Enhancements
-- Implement **unit tests** for Beam transforms
-- Add **Data Quality checks** (e.g., null, range validation)
-- Create **Looker dashboards** or use **Data Studio** for analytics
-- Deploy via **Terraform** for full infrastructure-as-code setup
-
----
-
-# Author
-
-**Aravind Chary**  
-_Data Engineer | GCP Enthusiast | Big Data Specialist_  
-📫 [arrojuari@gmail.com](mailto:arrojuari@gmail.com)
-
----
