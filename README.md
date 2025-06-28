@@ -37,7 +37,7 @@ Invalid records are logged to an error table
 
 Streaming Ingestion Pipeline:
 
-JSON events are published to Pub/Sub (manually or from external producers)
+JSON events are published to Pub/Sub 
 
 The Beam streaming pipeline reads from the Pub/Sub topic
 
@@ -47,7 +47,7 @@ Malformed data is sent to a separate error table
 
 # Dataset Usage
 Batch Load:
-Yelp JSON data stored in Cloud Storage is processed and loaded directly into BigQuery using Apache Beam via Dataflow (no Pub/Sub in the path).
+Yelp JSON data stored in Cloud Storage is processed and loaded directly into BigQuery using Apache Beam via Dataflow 
 
 Streaming Load:
 Yelp JSON data is published to Pub/Sub, from where it's consumed by a streaming Apache Beam pipeline and then loaded into BigQuery.
