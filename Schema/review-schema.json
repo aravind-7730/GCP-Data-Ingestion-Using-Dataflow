@@ -1,0 +1,47 @@
+[
+  {
+    "name": "review_id",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "user_id",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "business_id",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "stars",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "date",
+    "type": "DATETIME",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "useful",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "funny",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cool",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]
