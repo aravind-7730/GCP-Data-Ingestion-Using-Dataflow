@@ -45,7 +45,7 @@ Validates, parses, and writes records to BigQuery
 
 Malformed data is sent to a separate error table
 
-#Dataset Usage
+# Dataset Usage
 Batch Load:
 Yelp JSON data stored in Cloud Storage is processed and loaded directly into BigQuery using Apache Beam via Dataflow (no Pub/Sub in the path).
 
@@ -54,7 +54,7 @@ Yelp JSON data is published to Pub/Sub, from where it's consumed by a streaming 
 
 
 
-#Technologies Used
+# Technologies Used
 Apache Beam (Python SDK)
 
 Google Cloud Dataflow
