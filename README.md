@@ -1,24 +1,85 @@
-# Yelp Data Ingestion Pipeline on Google Cloud Platform (GCP)
+# Data Ingestion Pipeline on GCP (Batch & Streaming)
 
-This project demonstrates an end-to-end batch and streaming data ingestion pipeline built on **Google Cloud Platform (GCP)** using **Apache Beam**, **Cloud Dataflow**, **Cloud Pub/Sub**, and **BigQuery**. The pipeline processes Yelp dataset JSON files and supports both scheduled batch ingestion and real-time streaming ingestion.
-
----
-
-## 🚀 Use Case
-
-- **Batch Ingestion**: Load structured JSON data from **Google Cloud Storage (GCS)** into **BigQuery** after validation and transformation.
-- **Streaming Ingestion**: Real-time ingestion of Yelp data from **Pub/Sub**, transform and load it into **BigQuery**.
+This project demonstrates a robust data ingestion and processing pipeline built on **Google Cloud Platform (GCP)** using **Apache Beam**, **Dataflow**, **Pub/Sub**, and **BigQuery**. The pipeline ingests and processes data from the **Yelp dataset (JSON format)** with support for both **batch loads** and **real-time streaming**.
 
 ---
 
-## 🔧 Architecture Overview
+# Use Case
 
-```mermaid
-graph TD
-    A[GCS (Yelp JSON Files)] --> B[Dataflow (Apache Beam - Batch)]
-    B --> C[BigQuery (Valid Data)]
-    B --> D[BigQuery (Error Table)]
+## Batch Mode:
+- Reads Yelp JSON data from **Google Cloud Storage (GCS)**.
+- Validates and transforms the records using **Apache Beam**.
+- Loads clean data into **BigQuery**.
+- Malformed or invalid data is logged into an **error table**.
 
-    E[Pub/Sub Topic] --> F[Dataflow (Apache Beam - Streaming)]
-    F --> C
-    F --> D
+## Streaming Mode:
+- JSON records are published to a **Pub/Sub** topic in real-time.
+- A **streaming pipeline** reads data from Pub/Sub.
+- Validates, transforms, and loads records into **BigQuery**.
+- Malformed data is routed to a separate **error table**.
+
+---
+
+# Project Flow
+
+### Initial Setup:
+- Create GCP **Service Account** with required roles.
+- Install and configure **Google Cloud SDK**.
+- Set up Python environment with Beam and GCP libraries.
+
+### Yelp Dataset Integration:
+- Download and upload Yelp JSON files to **Cloud Storage**.
+- Upload **BigQuery-compatible schema** files to GCS.
+
+### Batch Ingestion Pipeline:
+- Triggered via **Cloud Composer** (Airflow) or manually.
+- Reads data from GCS, processes with Beam on Dataflow.
+- Loads clean records to **BigQuery** and invalid to **BQ error table**.
+
+### Streaming Ingestion Pipeline:
+- Publishes data to **Pub/Sub** topic.
+- Dataflow streaming job reads from topic and validates.
+- Inserts clean records into **BigQuery**.
+- Invalid messages go to an **error table**.
+
+---
+
+# Dataset Usage
+
+## Batch Load:
+Yelp JSON data stored in Cloud Storage is processed and loaded into BigQuery using Apache Beam running on Dataflow.
+
+## Streaming Load:
+Yelp JSON data is published to Pub/Sub and consumed by a Beam streaming pipeline running on Dataflow, then loaded into BigQuery.
+
+---
+
+# Technologies Used
+
+- **Apache Beam (Python SDK)**
+- **Google Cloud Dataflow**
+- **Google Cloud Pub/Sub**
+- **Google BigQuery**
+- **Google Cloud Storage**
+- **Google Cloud SDK**
+- **Python 3.x**
+- **Cloud Composer (Apache Airflow)**
+- *(Optional)* Vertex AI / Generative AI models for enhancement and metadata inference
+
+---
+
+# Optional Enhancements
+- Implement **unit tests** for Beam transforms
+- Add **Data Quality checks** (e.g., null, range validation)
+- Create **Looker dashboards** or use **Data Studio** for analytics
+- Deploy via **Terraform** for full infrastructure-as-code setup
+
+---
+
+# Author
+
+**Aravind Chary**  
+_Data Engineer | GCP Enthusiast | Big Data Specialist_  
+📫 [arrojuari@gmail.com](mailto:arrojuari@gmail.com)
+
+---
