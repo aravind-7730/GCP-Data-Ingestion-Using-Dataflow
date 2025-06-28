@@ -1,6 +1,6 @@
 #Commands used to run the ingestion pipelines
 
-python batch.py --input_path "gs://data-ingest-7730/data/data_in/review.json" --table "data-proc-7730:ingest.review" --error_table "data-proc-7730:ingest.error" --schema_path "gs://data-ingest-7730/data/schema/review-schema.json" --project data-proc-7730 --temp_location gs://data-ingest-7730/tmp --staging_location gs://data-ingest-7730/staging --runner DataflowRunner --job_name data-ingestion-20250517-04	
+python batch.py --input_path "gs://data-ingest-7730/data/data_in/business.json" --table "data-proc-7730:ingest.business" --error_table "data-proc-7730:ingest.error" --schema_path "gs://data-ingest-7730/data/schema/business-schema.json" --project data-proc-7730 --temp_location gs://data-ingest-7730/tmp --staging_location gs://data-ingest-7730/staging --runner DataflowRunner --job_name data-ingestion-20250517-05
 
 
 
