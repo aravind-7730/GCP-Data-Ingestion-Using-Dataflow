@@ -1,4 +1,4 @@
-#Commands used to run the ingestion pipelines
+#Commands used to run the ingestion pipelines from SDK
 
 python batch.py --input_path "gs://data-ingest-7730/data/data_in/business.json" --table "data-proc-7730:ingest.business" --error_table "data-proc-7730:ingest.error" --schema_path "gs://data-ingest-7730/data/schema/business-schema.json" --project data-proc-7730 --temp_location gs://data-ingest-7730/tmp --staging_location gs://data-ingest-7730/staging --runner DataflowRunner --job_name data-ingestion-20250517-05
 
