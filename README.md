@@ -54,6 +54,12 @@ Yelp JSON data is published to Pub/Sub and consumed by a Beam streaming pipeline
 
 ---
 
+# Orchestration and Scalability
+
+This pipeline is fully orchestrated using **Google Cloud Composer**, which leverages **Apache Airflow** to schedule, trigger, and monitor both batch and streaming jobs. The modular DAGs enable easy parameterization and reusability of code for different datasets or workflows.
+
+---
+
 # Technologies Used
 
 - **Apache Beam (Python SDK)**
@@ -66,10 +72,6 @@ Yelp JSON data is published to Pub/Sub and consumed by a Beam streaming pipeline
 - **Cloud Composer (Apache Airflow)**
 - **Vertex AI / Generative AI**
 
----
 
-# Orchestration and Scalability
-
-This pipeline is fully orchestrated using **Google Cloud Composer**, which leverages **Apache Airflow** to schedule, trigger, and monitor both batch and streaming jobs. The modular DAGs enable easy parameterization and reusability of code for different datasets or workflows.
 
 
