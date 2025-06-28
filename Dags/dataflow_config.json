@@ -1,0 +1,25 @@
+{
+  "batch": {
+    "input_path": "gs://data-ingest-7730/data/data_in/business.json",
+    "schema_path": "gs://data-ingest-7730/data/schema/business-schema.json",
+    "table": "data-proc-7730:ingest.review",
+    "error_table": "data-proc-7730:ingest.review_error",
+    "py_file": "/home/airflow/gcs/dags/batch.py"
+  },
+  "streaming": {
+    "input_path": "gs://data-ingest-7730/data/data_in/review.json",
+    "schema_path": "gs://data-ingest-7730/data/schema/review--schema.json",
+    "table": "data-proc-7730:ingest.review",
+    "error_table": "data-proc-7730:ingest.review_error",
+    "pubsub_topic": "projects/data-proc-7730/topics/yelp-dataset",
+    "pubsub_input": "projects/data-proc-7730/topics/yelp-dataset",
+    "py_file": "/home/airflow/gcs/dags/streaming.py"
+  },
+  "common": {
+    "project_id": "data-proc-7730",
+    "temp_location": "gs://data-ingest-7730/tmp",
+    "staging_location": "gs://data-ingest-7730/staging",
+    "region": "us-central1",
+    "job_name_prefix": "dataflow-job"
+  }
+}
