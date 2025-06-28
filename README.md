@@ -2,7 +2,7 @@
 This project demonstrates a robust data ingestion and processing pipeline built on Google Cloud Platform (GCP) using Apache Beam, Dataflow, Pub/Sub, and BigQuery. The pipeline ingests and processes data from the Yelp dataset (JSON format) with support for both batch loads and real-time streaming.
 
 # Use Case 
-#Batch Mode:
+# Batch Mode:
 Reads Yelp JSON data from Cloud Storage and loads it directly into BigQuery after validating and transforming the records.
 
 # Streaming Mode:
