@@ -59,6 +59,27 @@ Yelp JSON data is published to Pub/Sub and consumed by a Beam streaming pipeline
 This pipeline is fully orchestrated using **Google Cloud Composer**, which leverages **Apache Airflow** to schedule, trigger, and monitor both batch and streaming jobs. The modular DAGs enable easy parameterization and reusability of code for different datasets or workflows.
 
 ---
+# Visualization and Reporting
+The ingested data in BigQuery is visualized through an interactive and dynamic dashboard built using Looker Studio (formerly Data Studio).
+The single-page dashboard includes:
+
+Key Metrics: Total businesses, total reviews, average star ratings.
+
+Geo Maps: Business distribution by city/state.
+
+Time Series Charts: Review trends over time.
+
+Bar & Pie Charts: Category-wise and rating-wise breakdowns.
+
+Engagement Metrics: Average “useful”, “funny”, and “cool” scores.
+
+Interactive Filters: Filter by city, state, rating, category, or date.
+
+Business Details Table: Filterable table showing review and rating metrics per business.
+
+This dashboard enables stakeholders to derive meaningful insights from both historical and real-time Yelp review data.
+
+---
 
 # Technologies Used
 
