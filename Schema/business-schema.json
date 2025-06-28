@@ -1,0 +1,201 @@
+[
+    {
+      "name": "business_id",
+      "mode": "REQUIRED",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "name",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "address",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "city",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "state",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "postal_code",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "latitude",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "longitude",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "stars",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "review_count",
+      "mode": "NULLABLE",
+      "type": "INTEGER",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "is_open",
+      "mode": "NULLABLE",
+      "type": "INTEGER",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "attributes",
+      "mode": "NULLABLE",
+      "type": "RECORD",
+      "description": "",
+      "fields": [
+        {
+          "name": "RestaurantsTakeOut",
+          "mode": "NULLABLE",
+          "type": "BOOLEAN",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "BusinessParking",
+          "mode": "NULLABLE",
+          "type": "RECORD",
+          "description": "",
+          "fields": [
+            {
+              "name": "garage",
+              "mode": "NULLABLE",
+              "type": "BOOLEAN",
+              "description": "",
+              "fields": []
+            },
+            {
+              "name": "street",
+              "mode": "NULLABLE",
+              "type": "BOOLEAN",
+              "description": "",
+              "fields": []
+            },
+            {
+              "name": "validated",
+              "mode": "NULLABLE",
+              "type": "BOOLEAN",
+              "description": "",
+              "fields": []
+            },
+            {
+              "name": "lot",
+              "mode": "NULLABLE",
+              "type": "BOOLEAN",
+              "description": "",
+              "fields": []
+            },
+            {
+              "name": "valet",
+              "mode": "NULLABLE",
+              "type": "BOOLEAN",
+              "description": "",
+              "fields": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "categories",
+      "mode": "REPEATED",
+      "type": "STRING",
+      "description": "",
+      "fields": []
+    },
+    {
+      "name": "hours",
+      "mode": "NULLABLE",
+      "type": "RECORD",
+      "description": "",
+      "fields": [
+        {
+          "name": "Monday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Tuesday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Wednesday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Thursday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Friday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Saturday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        },
+        {
+          "name": "Sunday",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "",
+          "fields": []
+        }
+      ]
+    }
+  ]
