@@ -1,4 +1,4 @@
-#Data Ingestion Pipeline on GCP (Batch & Streaming)
+# Data Ingestion Pipeline on GCP (Batch & Streaming)
 This project demonstrates a robust data ingestion and processing pipeline built on Google Cloud Platform (GCP) using Apache Beam, Dataflow, Pub/Sub, and BigQuery. The pipeline ingests and processes data from the Yelp dataset (JSON format) with support for both batch loads and real-time streaming.
 
 # Use Case 
